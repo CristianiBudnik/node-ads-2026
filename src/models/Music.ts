@@ -6,17 +6,17 @@ export class Music extends Model {
     declare title: string;
     declare durationInSeconds: number;
     declare releaseYear: number;
-    declare photoUrl: string | null;
+    declare photoUrl: string | null
 }
 
 Music.init({
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
-        primaryKey: true,
+        primaryKey: true
     },
     title: {
-        type: DataTypes.STRING(150),
+        type: DataTypes.STRING(150), //varchar(150)
         allowNull: false
     },
     durationInSeconds: {
@@ -28,7 +28,7 @@ Music.init({
         allowNull: false
     },
     photoUrl: {
-        type: DataTypes.STRING(500),
+        type: DataTypes.STRING(500), //varchar(500)
         allowNull: true
     }
 }, {
